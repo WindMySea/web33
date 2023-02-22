@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      header {
+        background-color: #854905;
+        color: #9dd11a;
+        text-align: center;
+        font-weight: 500;
+        max-width: none !important;
+        font-size: 20px;
+        box-shadow: 0 4px 4px 0 rgb(0 0 0 / 25%);
+      }
+
+      footer {
+        background-color: #854905;
+        color: #9dd11a;
+        text-align: center;
+        font-weight: 500;
+        max-width: none !important;
+        font-size: 20px;
+        box-shadow: 0 4px 4px 0 rgb(0 0 0 / 25%);
+      }
+
+      #table {
+        font-family: Arial;
+        border-collapse: collapse;
+        width: 100%;
+      }
+      #table td,
+      #table th {
+        border: 2px solid #b70505;
+        padding: 10px;
+      }
+      #table tr:nth-child(even) {
+        background-color: #7b7bf1;
+      }
+
+      #table tr:hover {
+        background-color: #ddd;
+      }
+
+      #table th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: center;
+        background-color: #220628;
+        color: white;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      input[type="text"],
+      select,
+      textarea {
+        width: 100%;
+        padding: 15px;
+        border: 2px solid #ccc;
+        border-radius: 5px;
+        resize: vertical;
+      }
+
+      label {
+        padding: 12px 12px 12px 0;
+        display: inline-block;
+      }
+
+      input[type="submit"] {
+        background-color: #04aa6d;
+        color: white;
+        padding: 15px 25px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        float: right;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #45a049;
+      }
+
+      .form {
+        border-radius: 5px;
+        background-color: #f2f2f2;
+        padding: 20px;
+      }
+
+      .info-1 {
+        float: left;
+        width: 25%;
+        margin-top: 6px;
+      }
+
+      .info-2 {
+        float: left;
+        width: 75%;
+        margin-top: 6px;
+      }
+
+      .info:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+
+      @media screen and (max-width: 600px) {
+        .info-1,
+        .info-2,
+        input[type="submit"] {
+          width: 100%;
+          margin-top: 0;
+        }
+      }
+    </style>
+    <title>Github.com</title>
+    <link rel = "icon" href = "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" type = "image/x-icon">
+  </head>
+  <body>
+    <header>
+      <div>
+        <a href="https://github.com/">
+          <img
+            src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+            alt="gitbub.com"
+            style="width: 50px; height: 50px"
+          />
+        </a>
+        <input placeholder="Search.." /><button type="search">
+          Search
+        </button>
+        <a href="https://github.com/pulls" style="color: white"
+          >Pull requests</a
+        >
+        <a
+          href="https://techmaster.vn/san-pham-hoc-vien?page=1"
+          style="color: white"
+          >Issues</a
+        >
+        <a
+          href="https://techmaster.vn/trungtam/lich-khai-giang"
+          style="color: white"
+          >codespaces</a
+        >
+        <a href="https://techmaster.vn/posts" style="color: white"
+          >Marketplace</a
+        >
+        <a href="https://techmaster.vn/trai-nghiem" style="color: white"
+          >Explore</a
+        >
+      </div>
+    </header>
+
+    <main>
+      <section>
+        <div>
+          <h1 style="text-align: center" id="Sanpham">BẢNG GIÁ SẢN PHẨM</h1>
+          <p style="float: right">Đơn vị tính (vnd)</p>
+          <table id="table">
+            <tr>
+              <th>Sản Phẩm</th>
+              <th>Màu</th>
+              <th>xuất xứ</th>
+              <th>Giá</th>
+            </tr>
+            <tr>
+              <td>Sản Phẩm 1</td>
+              <td style="color: red">Màu đỏ</td>
+              <td style="font-family: Monospace">China</td>
+              <td style="font-size: 150%">1000</td>
+            </tr>
+
+            <tr>
+              <td>Sản Phẩm 2</td>
+              <td style="color: yellow">Màu Vàng</td>
+              <td style="font-family: Monospace">China</td>
+              <td style="font-size: 150%">2000</td>
+            </tr>
+            <tr>
+              <td>Sản Phẩm 3</td>
+              <td style="color: green">Màu Xanh lá</td>
+              <td style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif">Australia</td>
+              <td style="font-size: 200%">3000</td>
+            </tr>
+            <tr>
+              <td>Sản Phẩm 4</td>
+              <td style="color: blue">Màu xanh da trời</td>
+              <td style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif">Australia</td>
+              <td style="font-size: 200%">3500</td>
+            </tr>
+            <tr>
+              <td>Sản Phẩm 5</td>
+              <td style="color: pink">Màu hồng</td>
+              <td
+                style="
+                  font-family: 'Gill Sans', 'Gill Sans MT', Calibri,
+                    'Trebuchet MS', sans-serif;
+                "
+              >
+                Singapore
+              </td>
+              <td style="font-size: 250%">4000</td>
+            </tr>
+            <tr>
+              <td>Sản Phẩm 6</td>
+              <td style="color: orange">Màu Cam</td>
+              <td
+                style="
+                  font-family: 'Gill Sans', 'Gill Sans MT', Calibri,
+                    'Trebuchet MS', sans-serif;
+                "
+              >
+                Singapore
+              </td>
+              <td style="font-size: 250%">5000</td>
+            </tr>
+          </table>
+        </div>
+      </section>
+      <section id="DangKy">
+        <div>
+          <h2>Vui lòng Đăng ký để mua hàng</h2>
+          <div class="form">
+            <form action="myPage.php">
+               <div class="info">
+                <div class="info-1">
+                  <label for="Họ Và Tên">Họ Và Tên</label>
+                </div>
+                <div class="info-2">
+                  <input
+                    type="text"
+                    id="Họ Và Tên"
+                    name="Họ Và Tên"
+                    placeholder="Tên của bạn..."
+                  />
+                </div>
+              </div>
+              <div class="info">
+                <div class="info-1">
+                  <label for="Địa Chỉ">Địa Chỉ</label>
+                </div>
+                <div class="info-2">
+                  <input
+                    type="text"
+                    id="Địa Chỉ"
+                    name="Địa Chỉ"
+                    placeholder="Địa chỉ của bạn.."
+                  />
+                </div>
+              </div>
+              <div class="info">
+                <div class="info-1">
+                  <label for="Số Điện Thoại">Số Điện Thoại</label>
+                </div>
+                <div class="info-2">
+                  <input
+                    type="text"
+                    id="Số Điện Thoại"
+                    name="Số Điện Thoại"
+                    placeholder="Số điện thoại của bạn.."
+                  />
+                </div>
+              </div>
+
+              <div class="info">
+                <div class="info-1">
+                  <label for="Giới tính">Giới tính</label>
+                </div>
+                <div class="info-2">
+                  <select id="Giới tính" name="giới tính">
+                    <option value="Nam">Nam</option>
+                    <option value="Nữ">Nữ</option>
+                  </select>
+                </div>
+              </div>
+              <div class="info">
+                <div class="info-1">
+                  <label for="Ghi Chú">Ghi Chú</label>
+                </div>
+                <div class="info-2">
+                  <textarea
+                    id="Ghi Chú"
+                    name="Ghi Chú"
+                    placeholder="Lựa Chọn của bạn..."
+                    style="height: 200px"
+                  ></textarea>
+                </div>
+              </div>
+              <br />
+              <div class="info" id="Xacnhan">
+                <input type="submit" value="xác nhận" />
+              </div>
+            </form>
+          </div>
+        </div>
+        
+    
+        <div>
+          <h2>Hướng Dẫn Mua Hàng</h2>
+          <il>
+            <li><b>Bước1:</b> Điền Đầy đủ thông tin phần <a href="#DangKy">Đăng Ký</a>.</li>
+            <li><b>Bước2:</b> Chọn <a href="#Sanpham">Sản phẩm</a> và điền thông tin sản phẩm bạn chọn vào phần Ghi Chú</li>
+            <li><b>Bước3:</b> Nhấn <b>Xác Nhận</b> và Chờ Shop Liên hệ trực tiếp xác nhận đơn với Bạn.</li>
+          </ol>
+        
+          <h2>Cảm ơn bạn...!</h2>
+          
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div>
+        <span
+          ><a href="https://github.com/">
+            <img
+              src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+              alt="gitbub.com"
+              style="width: 50px; height: 50px" /></a
+          >&#169; 2023 Github, Inc.</span
+        >
+        <a
+          href="https://docs.github.com/en/site-policy/github-terms/github-terms-of-service"
+          style="color: white"
+          >terms</a
+        >
+        <a
+          href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement"
+          style="color: white"
+          >Privacy</a
+        >
+        <a href="https://github.com/security" style="color: white">Security</a>
+        <a href="https://www.githubstatus.com/" style="color: white">Status</a>
+        <a href="https://docs.github.com/en" style="color: white">Docs</a>
+        <a
+          href="https://support.github.com/?tags=dotcom-footer"
+          style="color: white"
+          >Contact Github</a
+        >
+        <a href="https://github.com/pricing" style="color: white">Pricing</a>
+        <a href="https://docs.github.com/en" style="color: white">API</a>
+        <a href="https://github.com/services/" style="color: white">Training</a>
+        <a href="https://github.blog/" style="color: white">Blog</a>
+        <a href="https://github.com/about" style="color: white">About</a>
+      </div>
+    </footer>
+  </body>
+</html>
