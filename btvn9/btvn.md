@@ -41,22 +41,22 @@ Không thể gán lại giá trị cho 1 biến const
 
 ## Kiểm tra kiểu dữ liệu của biến
 * Để kiểm tra kiểu dữ kiệu của 1 biến, chúng ta sử dụng toán tử `typeof`
-
+```
 let number = 10;
 console.log(typeof number); // "number"
 
 let name = "Bùi Hiên";
 console.log(typeof name); // "string"
-
+```
 # Kiểu dữ liệu String
 * String (chuỗi) là một đoạn text có thể có một hoặc nhiều ký tự.
 
 * Các chuỗi đều phải được bao quanh bằng cặp dấu nháy đơn ’ hoặc nháy kép ".
 
-
+```
 let name = “Nguyễn Văn A”;
 let email = “abc@gmail.com”;
-
+```
 # Nối chuỗi trong Javascript
 * Để nối chuỗi chúng ta sử dụng dấu + để ghép hai chuỗi (hoặc biến) lại với nhau.
 
@@ -68,15 +68,15 @@ let email = “abc@gmail.com”;
 * Function (hàm) là tập hợp các đoạn code dùng để thực hiện một tác vụ cụ thể nào đó.
 
 ## Cú pháp định nghĩa function
-
+```
 function functionName(para_1, ..., para_n) {
  // code thực thi function
 }
-
+```
 ## Thực thi function
-
+```
 functionName(para_1, ..., para_n)
-
+```
 # Phân biệt tham số (parameter) và đối số (argument)
 * Tham số (parameter) là biến trong khai báo hàm.
 * Đối số (argument) là giá trị thực của biến này được truyền vào hàm.
@@ -90,15 +90,16 @@ functionName(para_1, ..., para_n)
 2. Function có giá trị trả về hoặc không
 
 > Function không có tham số
+```
 function sayHello() {
     console.log("Xin chào các bạn");
 }
 
 sayHello();
-
+```
 > Function có tham số
 Với function kiểu này có thể có một hoặc nhiều tham số (không nên quá 3 tham số)
-
+```
 // Ví dụ function có 1 tham số
 function sayHello(name) {
     console.log(`Xin chào ${name}`);
@@ -110,30 +111,30 @@ function sayHello_1(name, city) {
     console.log(`Tôi tên là ${name}, quê tôi ở ${city}`);
 }
 sayHello_1("Bùi Hiên", "Thái Bình");
-
+```
 > Function trả về kết quả
 Để trả về kết quả, sử dụng từ khóa return
-
+```
 function sum(a, b) {
     return a + b;
 }
 
 let data = sum(3, 4);
 console.log(data);
-
+```
 // Nếu muốn kiểm tra nhanh kết quả của function có thể sử dụng luôn console.log
 console.log(sum(4, 5));
 
 ### Chú ý : Những câu lệnh đằng sau từ khóa return sẽ không được thực thi
 
 Ví dụ:
-
+```
 function sum(a, b) {
     return a + b;
     console.log(a); // không được thực thi
     console.log(b); // không được thực thi
 }
-
+```
 > Function không trả về kết quả
 Đối với function không có từ khóa return thì coi như function đó không trả về kết quả
 
@@ -158,16 +159,16 @@ function sum(a, b) {
 * Block scope
 * Global scope
 ## Một biến được coi là global scope (toàn cục) nếu biến đó được định nghĩa bên ngoài function
-
+```
 let name = "Bùi Hiên";
 let age = 25;
 
 console.log(name);
 console.log(age);
-
+```
 # Function scope
 * Một biến được coi là function scope nếu biến đó được định nghĩa bên trong function
-
+```
 function hello() {
     let name = "Bùi Hiên";
     console.log(name);
@@ -175,20 +176,20 @@ function hello() {
 
 hello(); // Bùi Hiên
 console.log(name) // Lỗi
-
+```
 # Block scope
 * Một biến được coi là block scope nếu biến đó được định nghĩa bên trong cặp dấu {}
-
+```
 {
     let name = "Bùi Hiên";
     console.log(name); // Bùi Hiên
 }
 
 console.log(name) // Lỗi
-
+```
 ## Chú ý
 Nếu 1 biến không có từ khóa khai báo biến, sẽ trở thành biền global
-
+```
 function sayHello() {
     number = 10;
     console.log(number);
@@ -197,3 +198,4 @@ function sayHello() {
 sayHello() // 10
 
 console.log(number); // 10
+```
