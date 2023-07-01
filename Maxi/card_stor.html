@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Giỏ hàng</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    .popup {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: white;
+      padding: 20px;
+      border: 1px solid black;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <button class="card-stor">Giỏ hàng</button>
+
+  <div class="popup">
+    <h2>Giỏ hàng</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Tên</th>
+          <th>Giá tiền</th>
+          <th>Số lượng</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody class="cart-items"></tbody>
+    </table>
+    <button class="close-popup">Đóng</button>
+  </div>
+
+  <script>
+    // Giỏ hàng mẫu
+    let cart = [
+      { name: 'Áo dài', price: 2000000, quantity: 2 },
+      { name: 'Vest Nam', price: 300000, quantity: 3 },
+      { name: 'Quần đi biển', price: 500000, quantity: 2 }
+    ];
+
+    // Lưu giỏ hàng vào local storage
+    localStorage.setItem('cart', JSON.stringify(cart));
+
+    // Xử lý khi bấm vào nút "card-stor"
+    $('.card-stor').on('click', function() {
+      // Lấy giỏ hàng từ local storage (nếu tồn tại)
+      cart = JSON.parse(localStorage.getItem('cart'));
+      displayCart(cart);
+      $('.popup').fadeIn();
+    });
+
+    // Xử lý khi bấm vào nút "close-popup"
+    $('.close-popup').on('click', function() {
+      $('.popup').fadeOut();
+    });
+
+    // Hiển thị giỏ hàng trong popup
+    function displayCart(cart) {
+      $('.cart-items').empty();
+      cart.forEach(function(item, index) {
+        const row = '<tr><td>' + item.name + '</td><td>' + item.price + '</td><td>' + item.quantity + '</td><td><button class="remove-item" data-index="' + index + '">Xóa</button></td></tr>';
+        $('.cart-items').append(row);
+      });
+    }
+
+    // Xử lý khi bấm vào nút "Xóa"
+    $('.cart-items').on('click', '.remove-item', function() {
+      const index = $(this).data('index');
+      cart.splice(index, 1);
+      localStorage.setItem('cart', JSON.stringify(cart));
+      displayCart(cart);
+    });
+  </script>
+</body>
+</html>
